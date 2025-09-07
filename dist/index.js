@@ -214,42 +214,42 @@ import { zodToJsonSchema } from "zod-to-json-schema";
 // src/types/mcp/tool.ts
 import { z } from "zod";
 var NavigateTool = z.object({
-  name: z.literal("mcp_mirailens_navigate"),
+  name: z.literal("mcp_mcpbridgex_navigate"),
   description: z.literal("Navigate the active tab to a URL"),
   arguments: z.object({
     url: z.string().url()
   })
 });
 var GoBackTool = z.object({
-  name: z.literal("mcp_mirailens_go_back"),
+  name: z.literal("mcp_mcpbridgex_go_back"),
   description: z.literal("Navigate back in history"),
   arguments: z.object({
     random_string: z.string().describe("Dummy parameter for no-parameter tools")
   })
 });
 var GoForwardTool = z.object({
-  name: z.literal("mcp_mirailens_go_forward"),
+  name: z.literal("mcp_mcpbridgex_go_forward"),
   description: z.literal("Navigate forward in history"),
   arguments: z.object({
     random_string: z.string().describe("Dummy parameter for no-parameter tools")
   })
 });
 var SnapshotTool = z.object({
-  name: z.literal("mcp_mirailens_snapshot"),
+  name: z.literal("mcp_mcpbridgex_snapshot"),
   description: z.literal("Capture an accessibility snapshot of the page"),
   arguments: z.object({
     random_string: z.string().describe("Dummy parameter for no-parameter tools")
   })
 });
 var ClickTool = z.object({
-  name: z.literal("mcp_mirailens_click"),
+  name: z.literal("mcp_mcpbridgex_click"),
   description: z.literal("Click an element by selector or ARIA query"),
   arguments: z.object({
     element: z.string().min(1)
   })
 });
 var DragTool = z.object({
-  name: z.literal("mcp_mirailens_drag"),
+  name: z.literal("mcp_mcpbridgex_drag"),
   description: z.literal("Drag an element to another element"),
   arguments: z.object({
     startElement: z.string().min(1),
@@ -257,14 +257,14 @@ var DragTool = z.object({
   })
 });
 var HoverTool = z.object({
-  name: z.literal("mcp_mirailens_hover"),
+  name: z.literal("mcp_mcpbridgex_hover"),
   description: z.literal("Hover over an element"),
   arguments: z.object({
     element: z.string().min(1)
   })
 });
 var TypeTool = z.object({
-  name: z.literal("mcp_mirailens_type"),
+  name: z.literal("mcp_mcpbridgex_type"),
   description: z.literal("Type text into an element"),
   arguments: z.object({
     element: z.string().min(1),
@@ -272,7 +272,7 @@ var TypeTool = z.object({
   })
 });
 var SelectOptionTool = z.object({
-  name: z.literal("mcp_mirailens_select_option"),
+  name: z.literal("mcp_mcpbridgex_select_option"),
   description: z.literal("Select an option in a select element"),
   arguments: z.object({
     element: z.string().min(1),
@@ -280,28 +280,28 @@ var SelectOptionTool = z.object({
   })
 });
 var PressKeyTool = z.object({
-  name: z.literal("mcp_mirailens_press_key"),
+  name: z.literal("mcp_mcpbridgex_press_key"),
   description: z.literal("Press a keyboard key"),
   arguments: z.object({
     key: z.string().min(1)
   })
 });
 var WaitTool = z.object({
-  name: z.literal("mcp_mirailens_wait"),
+  name: z.literal("mcp_mcpbridgex_wait"),
   description: z.literal("Wait for a number of seconds"),
   arguments: z.object({
     time: z.number().gt(0)
   })
 });
 var GetConsoleLogsTool = z.object({
-  name: z.literal("mcp_mirailens_get_console_logs"),
+  name: z.literal("mcp_mcpbridgex_get_console_logs"),
   description: z.literal("Get recent console logs from the page"),
   arguments: z.object({
     random_string: z.string().describe("Dummy parameter for no-parameter tools")
   })
 });
 var ScreenshotTool = z.object({
-  name: z.literal("mcp_mirailens_screenshot"),
+  name: z.literal("mcp_mcpbridgex_screenshot"),
   description: z.literal("Capture a PNG screenshot of the page"),
   arguments: z.object({
     random_string: z.string().describe("Dummy parameter for no-parameter tools")
