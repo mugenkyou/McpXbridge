@@ -1,10 +1,10 @@
-# MCPBridge - Model Context Protocol Server for Browser Automation
+# McpXbridge - Model Context Protocol Server for Browser Automation
 
 [![npm version](https://badge.fury.io/js/mcpbridgex.svg)](https://badge.fury.io/js/mcpbridgex)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 
-MCPBridge is a Model Context Protocol (MCP) server that provides browser automation capabilities for AI assistants and applications. It offers a standardized interface for controlling web browsers, enabling seamless integration with MCP-compatible clients such as Cursor, Claude, and other development tools.
+McpXbridge is a Model Context Protocol (MCP) server that provides browser automation capabilities for AI assistants and applications. It offers a standardized interface for controlling web browsers, enabling seamless integration with MCP-compatible clients such as Cursor, Claude, and other development tools.
 
 ## Features
 
@@ -19,7 +19,7 @@ MCPBridge is a Model Context Protocol (MCP) server that provides browser automat
 
 - Node.js version 18 or higher
 - Chrome or Chromium browser
-- MCPBridge browser extension (included)
+- McpXbridge browser extension (included)
 
 ## Installation
 
@@ -80,34 +80,34 @@ Restart Cursor after saving the configuration file.
 ### Navigation Tools
 - `mcp_mcpbridgex_navigate` - Navigate to a specified URL
 - `mcp_mcpbridgex_go_back` - Navigate to the previous page in browser history
-- `mcp_mcpbridgex_go_forward` - Navigate to the next page in browser history
+- `goForward` - Navigate to the next page in browser history
 
 ### Interaction Tools
 - `mcp_mcpbridgex_click` - Click on page elements using CSS selectors or ARIA queries
 - `mcp_mcpbridgex_hover` - Hover over specified elements
-- `mcp_mcpbridgex_type` - Input text into form fields and text areas
-- `mcp_mcpbridgex_select_option` - Select options from dropdown menus
-- `mcp_mcpbridgex_press_key` - Send keyboard events to the active page
-- `mcp_mcpbridgex_wait` - Pause execution for specified time intervals
+- `type` - Input text into form fields and text areas
+- `selectOption` - Select options from dropdown menus
+- `pressKey` - Send keyboard events to the active page
+- `wait` - Pause execution for specified time intervals
 
 ### Inspection Tools
-- `mcp_mcpbridgex_snapshot` - Generate accessibility tree snapshots of page content
-- `mcp_mcpbridgex_get_console_logs` - Retrieve browser console messages and errors
-- `mcp_mcpbridgex_screenshot` - Capture PNG screenshots of the current page state
+- `snapshot` - Generate accessibility tree snapshots of page content
+- `getConsoleLogs` - Retrieve browser console messages and errors
+- `screenshot` - Capture PNG screenshots of the current page state
 
 ## Browser Extension Setup
 
-The MCPBridge browser extension facilitates communication between the MCP server and browser tabs:
+The McpXbridge browser extension facilitates communication between the MCP server and browser tabs:
 
 1. Open Chrome or Chromium browser
 2. Go to the Chrome Web Store
-3. Search for "MCPBRIDGEX" extension
+3. Search for "McpXbridge" extension
 4. Click "Add to Chrome" to install the extension
-5. The extension will connect automatically to your running MCPBridge server
+5. The extension will connect automatically to your running McpXbridge server
 
 ## API Reference
 
-MCPBridge implements the Model Context Protocol specification, providing a standardized interface for browser automation. All tools follow MCP conventions for parameter passing and result handling.
+McpXbridge implements the Model Context Protocol specification, providing a standardized interface for browser automation. All tools follow MCP conventions for parameter passing and result handling.
 
 ### Example Usage
 
@@ -123,12 +123,12 @@ await client.callTool('mcp_mcpbridgex_click', {
 });
 
 // Capture page content
-const snapshot = await client.callTool('mcp_mcpbridgex_snapshot');
+const snapshot = await client.callTool('snapshot');
 ```
 
 ## Architecture
 
-MCPBridge consists of:
+McpXbridge consists of:
 - **MCP Server**: Handles client connections and tool execution requests
 - **Browser Extension**: Executes automation commands within browser context
 - **WebSocket Transport**: Manages real-time communication between components
@@ -162,7 +162,7 @@ MCPBridge consists of:
 
 ## Security Notes
 
-MCPBridge operates with browser-level permissions and should be used in trusted environments. The extension requires access to active tabs for automation functionality.
+McpXbridge operates with browser-level permissions and should be used in trusted environments. The extension requires access to active tabs for automation functionality.
 
 ## Support
 

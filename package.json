@@ -1,7 +1,7 @@
 {
   "name": "mcpbridgex",
   "version": "0.1.0",
-  "description": "MCP server for browser automation using MCPBridge",
+  "description": "MCP server for browser automation using McpXbridge",
   "keywords": [
     "mcp",
     "model-context-protocol",
@@ -16,7 +16,7 @@
     "typescript",
     "nodejs"
   ],
-  "author": "MCPBridge",
+  "author": "McpXbridge",
   "homepage": "https://github.com/mugenkyou/mcpbridgex",
   "bugs": "https://github.com/mugenkyou/mcpbridgex/issues",
   

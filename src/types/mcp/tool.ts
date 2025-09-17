@@ -17,7 +17,7 @@ export const GoBackTool = z.object({
 });
 
 export const GoForwardTool = z.object({
-  name: z.literal("mcp_mcpbridgex_go_forward"),
+  name: z.literal("goForward"),
   description: z.literal("Navigate forward in history"),
   arguments: z.object({
     random_string: z.string().describe("Dummy parameter for no-parameter tools"),
@@ -25,7 +25,7 @@ export const GoForwardTool = z.object({
 });
 
 export const SnapshotTool = z.object({
-  name: z.literal("mcp_mcpbridgex_snapshot"),
+  name: z.literal("snapshot"),
   description: z.literal("Capture an accessibility snapshot of the page"),
   arguments: z.object({
     random_string: z.string().describe("Dummy parameter for no-parameter tools"),
@@ -58,7 +58,7 @@ export const HoverTool = z.object({
 });
 
 export const TypeTool = z.object({
-  name: z.literal("mcp_mcpbridgex_type"),
+  name: z.literal("type"),
   description: z.literal("Type text into an element"),
   arguments: z.object({
     element: z.string().min(1),
@@ -67,7 +67,7 @@ export const TypeTool = z.object({
 });
 
 export const SelectOptionTool = z.object({
-  name: z.literal("mcp_mcpbridgex_select_option"),
+  name: z.literal("selectOption"),
   description: z.literal("Select an option in a select element"),
   arguments: z.object({
     element: z.string().min(1),
@@ -76,7 +76,7 @@ export const SelectOptionTool = z.object({
 });
 
 export const PressKeyTool = z.object({
-  name: z.literal("mcp_mcpbridgex_press_key"),
+  name: z.literal("pressKey"),
   description: z.literal("Press a keyboard key"),
   arguments: z.object({
     key: z.string().min(1),
@@ -84,7 +84,7 @@ export const PressKeyTool = z.object({
 });
 
 export const WaitTool = z.object({
-  name: z.literal("mcp_mcpbridgex_wait"),
+  name: z.literal("wait"),
   description: z.literal("Wait for a number of seconds"),
   arguments: z.object({
     time: z.number().gt(0),
@@ -92,7 +92,7 @@ export const WaitTool = z.object({
 });
 
 export const GetConsoleLogsTool = z.object({
-  name: z.literal("mcp_mcpbridgex_get_console_logs"),
+  name: z.literal("getConsoleLogs"),
   description: z.literal("Get recent console logs from the page"),
   arguments: z.object({
     random_string: z.string().describe("Dummy parameter for no-parameter tools"),
@@ -100,7 +100,7 @@ export const GetConsoleLogsTool = z.object({
 });
 
 export const ScreenshotTool = z.object({
-  name: z.literal("mcp_mcpbridgex_screenshot"),
+  name: z.literal("screenshot"),
   description: z.literal("Capture a PNG screenshot of the page"),
   arguments: z.object({
     random_string: z.string().describe("Dummy parameter for no-parameter tools"),
