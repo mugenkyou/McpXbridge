@@ -1,5 +1,5 @@
 {
-  "name": "mcpbridgex",
+  "name": "mcpXbridge",
   "version": "0.1.0",
   "description": "MCP server for browser automation using McpXbridge",
   "keywords": [
@@ -17,8 +17,8 @@
     "nodejs"
   ],
   "author": "McpXbridge",
-  "homepage": "https://github.com/mugenkyou/mcpbridgex",
-  "bugs": "https://github.com/mugenkyou/mcpbridgex/issues",
+  "homepage": "https://github.com/mugenkyou/mcpXbridge",
+  "bugs": "https://github.com/mugenkyou/mcpXbridge/issues",
   
   "type": "module",
   "bin": {

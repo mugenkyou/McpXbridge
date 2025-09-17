@@ -228,14 +228,14 @@ var GoBackTool = z.object({
   })
 });
 var GoForwardTool = z.object({
-  name: z.literal("mcp_mcpbridgex_go_forward"),
+  name: z.literal("goForward"),
   description: z.literal("Navigate forward in history"),
   arguments: z.object({
     random_string: z.string().describe("Dummy parameter for no-parameter tools")
   })
 });
 var SnapshotTool = z.object({
-  name: z.literal("mcp_mcpbridgex_snapshot"),
+  name: z.literal("snapshot"),
   description: z.literal("Capture an accessibility snapshot of the page"),
   arguments: z.object({
     random_string: z.string().describe("Dummy parameter for no-parameter tools")
@@ -264,7 +264,7 @@ var HoverTool = z.object({
   })
 });
 var TypeTool = z.object({
-  name: z.literal("mcp_mcpbridgex_type"),
+  name: z.literal("type"),
   description: z.literal("Type text into an element"),
   arguments: z.object({
     element: z.string().min(1),
@@ -272,7 +272,7 @@ var TypeTool = z.object({
   })
 });
 var SelectOptionTool = z.object({
-  name: z.literal("mcp_mcpbridgex_select_option"),
+  name: z.literal("selectOption"),
   description: z.literal("Select an option in a select element"),
   arguments: z.object({
     element: z.string().min(1),
@@ -280,28 +280,28 @@ var SelectOptionTool = z.object({
   })
 });
 var PressKeyTool = z.object({
-  name: z.literal("mcp_mcpbridgex_press_key"),
+  name: z.literal("pressKey"),
   description: z.literal("Press a keyboard key"),
   arguments: z.object({
     key: z.string().min(1)
   })
 });
 var WaitTool = z.object({
-  name: z.literal("mcp_mcpbridgex_wait"),
+  name: z.literal("wait"),
   description: z.literal("Wait for a number of seconds"),
   arguments: z.object({
     time: z.number().gt(0)
   })
 });
 var GetConsoleLogsTool = z.object({
-  name: z.literal("mcp_mcpbridgex_get_console_logs"),
+  name: z.literal("getConsoleLogs"),
   description: z.literal("Get recent console logs from the page"),
   arguments: z.object({
     random_string: z.string().describe("Dummy parameter for no-parameter tools")
   })
 });
 var ScreenshotTool = z.object({
-  name: z.literal("mcp_mcpbridgex_screenshot"),
+  name: z.literal("screenshot"),
   description: z.literal("Capture a PNG screenshot of the page"),
   arguments: z.object({
     random_string: z.string().describe("Dummy parameter for no-parameter tools")
@@ -597,12 +597,26 @@ var selectOption = {
 
 // package.json
 var package_default = {
-  name: "mcpbridgex",
+  name: "mcpXbridge",
   version: "0.1.0",
-  description: "MCP server for browser automation using MCPBridge",
-  author: "MCPBridge",
-  homepage: "https://github.com/mugenkyou/mcpbridgex",
-  bugs: "https://github.com/mugenkyou/mcpbridgex/issues",
+  description: "MCP server for browser automation using McpXbridge",
+  keywords: [
+    "mcp",
+    "model-context-protocol",
+    "browser-automation",
+    "ai-assistant",
+    "web-automation",
+    "cursor",
+    "claude",
+    "accessibility",
+    "web-scraping",
+    "browser-control",
+    "typescript",
+    "nodejs"
+  ],
+  author: "McpXbridge",
+  homepage: "https://github.com/mugenkyou/mcpXbridge",
+  bugs: "https://github.com/mugenkyou/mcpXbridge/issues",
   type: "module",
   bin: {
     mcpbridgex: "dist/index.js"
