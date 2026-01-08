@@ -1,5 +1,5 @@
 export const mcpConfig = {
-  defaultWsPort: 3001,
+  defaultWsPort: 29100,
   errors: {
     noConnectedTab: "No connected tab",
   },

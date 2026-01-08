@@ -32,8 +32,11 @@ export function createSocketMessageSender<T>(
 
         const handleMessage = (data: any) => {
           try {
-            const response = JSON.parse(data.toString());
+            const raw = data.toString();
+            console.error(`[Sender] Raw received: ${raw}`);
+            const response = JSON.parse(raw);
             if (response.id === messageId) {
+              console.error(`[Sender] Matched ID: ${messageId}`);
               clearTimeout(timeout);
               ws.off('message', handleMessage);
               if (response.error) {
@@ -41,13 +44,16 @@ export function createSocketMessageSender<T>(
               } else {
                 resolve(response.result);
               }
+            } else {
+               console.error(`[Sender] Ignored message with ID: ${response.id}, expected: ${messageId}`);
             }
           } catch (e) {
-            // Ignore malformed messages
+            console.error(`[Sender] Parse error: ${e}`, data.toString());
           }
         };
 
         ws.on('message', handleMessage);
+        console.error(`[Sender] Sending message: ${JSON.stringify(message)}`);
         ws.send(JSON.stringify(message));
       });
     },

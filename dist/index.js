@@ -35,8 +35,11 @@ function createSocketMessageSender(ws) {
         };
         const handleMessage = (data) => {
           try {
-            const response = JSON.parse(data.toString());
+            const raw = data.toString();
+            console.error(`[Sender] Raw received: ${raw}`);
+            const response = JSON.parse(raw);
             if (response.id === messageId) {
+              console.error(`[Sender] Matched ID: ${messageId}`);
               clearTimeout(timeout);
               ws.off("message", handleMessage);
               if (response.error) {
@@ -44,11 +47,15 @@ function createSocketMessageSender(ws) {
               } else {
                 resolve(response.result);
               }
+            } else {
+              console.error(`[Sender] Ignored message with ID: ${response.id}, expected: ${messageId}`);
             }
           } catch (e) {
+            console.error(`[Sender] Parse error: ${e}`, data.toString());
           }
         };
         ws.on("message", handleMessage);
+        console.error(`[Sender] Sending message: ${JSON.stringify(message)}`);
         ws.send(JSON.stringify(message));
       });
     }
@@ -57,7 +64,7 @@ function createSocketMessageSender(ws) {
 
 // src/config/mcp.config.ts
 var mcpConfig = {
-  defaultWsPort: 3001,
+  defaultWsPort: 29100,
   errors: {
     noConnectedTab: "No connected tab"
   }
@@ -597,7 +604,7 @@ var selectOption = {
 
 // package.json
 var package_default = {
-  name: "mcpXbridge",
+  name: "mcpxbridge",
   version: "0.1.0",
   description: "MCP server for browser automation using McpXbridge",
   keywords: [
