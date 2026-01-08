@@ -605,7 +605,7 @@ var selectOption = {
 // package.json
 var package_default = {
   name: "mcpxbridge",
-  version: "0.1.0",
+  version: "1.0.0",
   description: "MCP server for browser automation using McpXbridge",
   keywords: [
     "mcp",
