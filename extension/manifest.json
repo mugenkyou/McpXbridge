@@ -1,13 +1,13 @@
 {
   "manifest_version": 3,
-  "name": "MiraiLens Connector",
+  "name": "McpXbridge Connector",
   "version": "1.0.0",
-  "description": "Connects MiraiLens MCP server to the active browser tab for AI-powered web automation",
-  "author": "MiraiLens",
+  "description": "Connects McpXbridge to the active browser tab for seamless AI-powered web interactions and automation.",
+  "author": "McpXbridge",
   "homepage_url": "https://github.com/mugenkyou/mcp-server-mirailens",
   "action": {
     "default_popup": "popup.html",
-    "default_title": "MiraiLens MCP Connector"
+    "default_title": "McpXbridge Connector"
   },
   "permissions": [
     "scripting",
@@ -31,7 +31,9 @@
     }
   ],
   "icons": {
-    "16": "icons/favicon.png"
+    "16": "icons/logo.png",
+    "48": "icons/logo.png",
+    "128": "icons/logo.png"
   },
   "content_security_policy": {
     "extension_pages": "script-src 'self'; object-src 'self'; connect-src 'self' ws: wss:"

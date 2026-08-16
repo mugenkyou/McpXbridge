@@ -1,7 +1,7 @@
 # McpXbridge - Model Context Protocol Server for Browser Automation
 
 [![npm version](https://badge.fury.io/js/mcpbridgex.svg)](https://badge.fury.io/js/mcpbridgex)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
 
 McpXbridge is a Model Context Protocol (MCP) server that provides browser automation capabilities for AI assistants and applications. It offers a standardized interface for controlling web browsers, enabling seamless integration with MCP-compatible clients such as Cursor, Claude, and other development tools.
@@ -170,7 +170,7 @@ For technical support and documentation updates, please refer to the npm package
 
 ## License
 
-This software is licensed under the MIT License.
+This software is licensed under the Apache License, Version 2.0.
 
 ---
 

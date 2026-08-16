@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" fill="none">
+  <defs>
+    <linearGradient id="primaryGradient" x1="10" y1="10" x2="118" y2="118" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#3B82F6"/>
+      <stop offset="100%" stop-color="#8B5CF6"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+  
+  <!-- Outer ring -->
+  <circle cx="64" cy="64" r="56" stroke="url(#primaryGradient)" stroke-width="8" fill="none" opacity="0.1"/>
+  <path d="M64 8 A56 56 0 0 1 120 64" stroke="url(#primaryGradient)" stroke-width="8" stroke-linecap="round"/>
+  <path d="M64 120 A56 56 0 0 1 8 64" stroke="url(#primaryGradient)" stroke-width="8" stroke-linecap="round"/>
+  
+  <!-- Inner Lens elements -->
+  <circle cx="64" cy="64" r="32" fill="url(#primaryGradient)" fill-opacity="0.1" stroke="url(#primaryGradient)" stroke-width="4"/>
+  
+  <!-- Iris/Pupil -->
+  <circle cx="64" cy="64" r="16" fill="url(#primaryGradient)" filter="url(#glow)"/>
+  
+  <!-- Tech accents -->
+  <rect x="60" y="4" width="8" height="12" rx="2" fill="url(#primaryGradient)"/>
+  <rect x="60" y="112" width="8" height="12" rx="2" fill="url(#primaryGradient)"/>
+  <rect x="4" y="60" width="12" height="8" rx="2" fill="url(#primaryGradient)"/>
+  <rect x="112" y="60" width="12" height="8" rx="2" fill="url(#primaryGradient)"/>
+</svg>
