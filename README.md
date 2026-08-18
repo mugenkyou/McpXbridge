@@ -1,6 +1,6 @@
 # McpXbridge - Model Context Protocol Server for Browser Automation
 
-[![npm version](https://badge.fury.io/js/mcpbridgex.svg)](https://badge.fury.io/js/mcpbridgex)
+[![npm version](https://badge.fury.io/js/mcpxbridge.svg)](https://www.npmjs.com/package/mcpxbridge)
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
 
